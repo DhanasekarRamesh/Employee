@@ -64,6 +64,12 @@ Add your *mysql* connectionstring in appsettings.json file in the root project.
 
 <br />
 
+**To update/recreate dbcontext and models use the below command**
+
+> dotnet ef dbcontext scaffold -c MyDBContext --context-dir Data -o Models -f Name=constring Pomelo.EntityFrameworkCore.MySql
+
+<br />
+
 **To generate controllers use the below command**
 
 >  dotnet aspnet-codegenerator controller -name CategoryController -async -api -m Category -dc MyDBContext -outDir Controllers
