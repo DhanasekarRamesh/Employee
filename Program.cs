@@ -1,4 +1,12 @@
+using Microsoft.EntityFrameworkCore;
+using employee_management_api.Data;
+
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<AppDBContext>(
+    opt => opt.UseMySql(builder.Configuration.GetConnectionString("constring"),ServerVersion.Parse("5.5.51-mysql"))
+);
 
 // Add services to the container.
 

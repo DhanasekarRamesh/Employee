@@ -56,23 +56,27 @@ Add your *mysql* connectionstring in appsettings.json file in the root project.
 
 > dotnet add package Microsoft.EntityFrameworkCore.Tools
 
+> dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
+
 <br />
 
 **To generate dbcontext and models use the below command**
 
-> dotnet ef dbcontext scaffold -c MyDBContext --context-dir Data -o Models  Name=constring Pomelo.EntityFrameworkCore.MySql
+> dotnet ef dbcontext scaffold -c AppDBContext --context-dir Data -o Data\Entity  Name=constring Pomelo.EntityFrameworkCore.MySql
 
 <br />
 
 **To update/recreate dbcontext and models use the below command**
 
-> dotnet ef dbcontext scaffold -c MyDBContext --context-dir Data -o Models -f Name=constring Pomelo.EntityFrameworkCore.MySql
+> dotnet ef dbcontext scaffold -c MyDBContext --context-dir Data -o Data\Entity -f Name=constring Pomelo.EntityFrameworkCore.MySql
 
 <br />
 
 **To generate controllers use the below command**
 
->  dotnet aspnet-codegenerator controller -name CategoryController -async -api -m Category -dc MyDBContext -outDir Controllers
+>  dotnet aspnet-codegenerator controller -name RoleController -async -api -m Role -dc AppDBContext -outDir Controllers
+
+
 
 
 

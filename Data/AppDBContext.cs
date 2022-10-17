@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using employee_management_api.Models;
+using employee_management_api.Data.Entity;
 
 namespace employee_management_api.Data
 {
-    public partial class MyDBContext : DbContext
+    public partial class AppDBContext : DbContext
     {
-        public MyDBContext()
+        public AppDBContext()
         {
         }
 
-        public MyDBContext(DbContextOptions<MyDBContext> options)
+        public AppDBContext(DbContextOptions<AppDBContext> options)
             : base(options)
         {
         }

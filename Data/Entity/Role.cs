@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace employee_management_api.Models
+namespace employee_management_api.Data.Entity
 {
-    public partial class UserDocumentType
+    public partial class Role
     {
         public int Id { get; set; }
         public string Name { get; set; } = null!;
